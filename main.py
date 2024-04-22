@@ -4,15 +4,16 @@ for i in range(1, num):
     if(num % i == 0):
         sum1 = sum1 + i
 if (sum1 == num):
-    print("Đây là số hoàn hảo")
+    print("Đây là số hoàn hảo.")
 else:
     print("Đây không phải là số hoàn hảo.")
+num2 = num
 reverse = 0
-while num!=0:
-  rem = num%10
-  reverse = rem + (reverse*10)
-  num = int(num/10)
-if reverse == num:
-  print("Đây là số đối xứng")
+while num2!=0:
+  digit = num2 % 10
+  reverse = reverse * 10 + digit
+  num2 //= 10
+if num == reverse:
+  print("Đây là số đối xứng.")
 else:
   print("Đây không phải là số đối xứng")
